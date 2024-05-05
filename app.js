@@ -14,3 +14,7 @@ app.use("/api", paymentRoute);
 app.get("/api/getkey", (req, res) =>
   res.status(200).json({ key: process.env.RAZORPAY_API })
 );
+app.get("/", (req, res) =>
+{
+  res.send("Server is up and running");
+})
